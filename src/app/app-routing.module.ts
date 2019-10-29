@@ -20,14 +20,7 @@ const routes: Routes = [
     path: 'logar',
     loadChildren: () => import('./logar/logar.module').then(m => m.LogarPageModule)
   },
-  {
-    path: 'frutas',
-    loadChildren: () => import('./frutas/frutas.module').then(m => m.FrutasPageModule)
-  },
-  {
-    path: 'limpeza',
-    loadChildren: () => import('./limpeza/limpeza.module').then(m => m.LimpezaPageModule)
-  },
+  
   { path: 'logar', 
   loadChildren: './logar/logar.module#LogarPageModule',
   canLoad: [AuthGuard] 
@@ -35,6 +28,8 @@ const routes: Routes = [
   { path: 'registrar', loadChildren: './registrar/registrar.module#RegistrarPageModule' },
   { path: 'frutas', loadChildren: './frutas/frutas.module#FrutasPageModule' },
   { path: 'limpeza', loadChildren: './limpeza/limpeza.module#LimpezaPageModule' },
+  { path: 'laticinios', loadChildren: './laticinios/laticinios.module#LaticiniosPageModule' },
+  { path: 'frios', loadChildren: './frios/frios.module#FriosPageModule' },
 ];
 
 @NgModule({

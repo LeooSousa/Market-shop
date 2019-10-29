@@ -34,18 +34,35 @@
           </ion-col>
         </ion-row>
   </ion-grid> -->
+  <ion-searchbar showCancelButton="never"></ion-searchbar>
   <ion-list>
       <ion-item>
-       <ion-button (click)="irParaFrutas()"></ion-button><img src="../assets/icon/frutas.png" /><ion-label> Frutas e Verduras </ion-label></a>
+          <ion-avatar slot="start">
+              <img src="../assets/icon/frutas.png">
+          </ion-avatar>
+        <ion-label> Frutas e Verduras </ion-label>
+        <a routerLink='/frutas'>VER</a>
       </ion-item>
       <ion-item>
-        <img src="../assets/icon/laticinios.png" /><ion-label> Laticiníos</ion-label>
-      </ion-item>
-      <ion-item routerLink='/limpeza'>
-        <img src="../assets/icon/limpeza.png" /><ion-label> Limpeza</ion-label>
+          <ion-avatar slot="start">
+              <img src="../assets/icon/laticinios.png">
+          </ion-avatar>
+        <ion-label> Laticiníos</ion-label>
+        <a routerLink='/laticinios'>VER</a>
       </ion-item>
       <ion-item>
-        <img src="../assets/icon/frios.png" /><ion-label>Frios</ion-label>
+          <ion-avatar slot="start">
+              <img src="../assets/icon/limpeza.png">
+          </ion-avatar>
+        <ion-label> Limpeza</ion-label>
+        <a routerLink='/limpeza'>VER</a>
+      </ion-item>
+      <ion-item>
+          <ion-avatar slot="start">
+              <img src="../assets/icon/frios.png">
+          </ion-avatar>
+        <ion-label>Frios</ion-label>
+        <a routerLink='/frios'>VER</a>
       </ion-item>
     </ion-list>
   <!-- <ion-list>
