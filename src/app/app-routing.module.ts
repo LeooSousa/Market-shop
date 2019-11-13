@@ -30,6 +30,7 @@ const routes: Routes = [
   { path: 'limpeza', loadChildren: './limpeza/limpeza.module#LimpezaPageModule' },
   { path: 'laticinios', loadChildren: './laticinios/laticinios.module#LaticiniosPageModule' },
   { path: 'frios', loadChildren: './frios/frios.module#FriosPageModule' },
+  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
 ];
 
 @NgModule({

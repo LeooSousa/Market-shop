@@ -25,6 +25,11 @@ export class AppComponent {
       title: 'Logar',
       url: '/logar',
       icon: 'contact'
+    },
+    {
+      title: 'Perfil',
+      url: '/perfil',
+      icon: 'contact'
     }
 
   ];

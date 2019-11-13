@@ -11,6 +11,8 @@ import { RouteReuseStrategy } from '@angular/router';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

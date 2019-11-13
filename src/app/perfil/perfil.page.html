@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let item of selectedItems" lines="inset">
+    {{ item.title }}x {{ item.author }} - 
+  </ion-item>
+</ion-content>

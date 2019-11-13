@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar text-center>
+  <ion-toolbar color="dark" text-center>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="card-background-page">
 
   <!-- <ion-grid>
       <ion-row>
@@ -65,6 +65,44 @@
         <a routerLink='/frios'>VER</a>
       </ion-item>
     </ion-list>
+
+    <ion-grid>
+      <ion-row>
+          <ion-col>
+            <ion-card>
+              <img src="../assets/icon/frutas.png">
+              <div class="card-title">Frutas</div>
+              <div class="card-subtitle"><a routerLink='/frutas'>VER</a></div>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card>
+              <img src="../assets/icon/laticinios.png">
+              <div class="card-title">laticinios</div>
+              <div class="card-subtitle"><a routerLink='/laticinios'>VER</a></div>
+            </ion-card>
+          </ion-col>
+      </ion-row>
+      <ion-row> 
+          <ion-col>
+          <ion-card>
+              <img src="../assets/icon/limpeza.png">
+              <div class="card-title">Limpeza</div>
+              <div class="card-subtitle"><a routerLink='/limpeza'>VER</a></div>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+          <ion-card>
+              <img src="../assets/icon/frios.png">
+              <div class="card-title">frios</div>
+              <div class="card-subtitle"><a routerLink='/frios'>VER</a></div>
+            </ion-card>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    
+
   <!-- <ion-list>
     <ion-item *ngFor="let item of items">
       <ion-icon [name]="item.icon" slot="start"></ion-icon>

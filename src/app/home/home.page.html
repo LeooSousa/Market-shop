@@ -1,10 +1,10 @@
 <ion-header>
-  <ion-toolbar text-center color="black">
+  <ion-toolbar text-center color="dark">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      Tutorial
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,8 +14,8 @@
 
         <ion-slide>
           <img src="./slide-1.png"/>
-          <h2>Welcome to the <b>ICA</b></h2>
-          <p>The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.</p>
+          <h2>Bem vindo ao <b>Market Shop</b></h2>
+          <p>O <b>Melhor app de compras em supermercado,</b> ele é prático e facil de usar!</p>
         </ion-slide>
 
         <ion-slide>
@@ -33,7 +33,7 @@
         <ion-slide>
           <img src="./slide-4.png"/>
           <h2>Ready to Play?</h2>
-          <ion-button fill="clear">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+          <ion-button fill="clear"><a routerLink='/logar'>Continue</a> <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
         </ion-slide>
 
       </ion-slides>
@@ -106,7 +106,7 @@
 
 
   <ion-fab vertical="bottom" horizontal="start" slot="fixed">
-      <ion-fab-button>Share</ion-fab-button>
+      <ion-fab-button color="dark">Share</ion-fab-button>
     
       <ion-fab-list side="top">
         <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
@@ -115,6 +115,10 @@
         <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
       </ion-fab-list>
     </ion-fab>
+    <ion-infinite-scroll threshold="100px" >
+      <ion-infinite-scroll-content>
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
     
   
 </ion-content>
