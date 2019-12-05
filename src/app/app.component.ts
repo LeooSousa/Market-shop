@@ -3,6 +3,10 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Observable } from 'rxjs';
+import { Frete } from '../Frete';
+import { FreteService } from './app.service';
+
 
 @Component({
   selector: 'app-root',
@@ -17,8 +21,8 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Lista de setores',
-      url: '/list',
+      title: 'Lista de Mercados',
+      url: '/mercados',
       icon: 'list'
     },
     {
@@ -33,11 +37,14 @@ export class AppComponent {
     }
 
   ];
+  frete: any;
+  cep: any;
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private _freteService: FreteService
   ) {
     this.initializeApp();
   }
@@ -47,5 +54,13 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+  CalcularFrete(): void {
+    this._freteService.getFrete(this.cep)
+        .subscribe((data: Frete) => this.frete = data,
+        error => console.log(error));                                                                            
+  }
+  Cep(cep: any) {
+    throw new Error("Method not implemented.");
   }
 }

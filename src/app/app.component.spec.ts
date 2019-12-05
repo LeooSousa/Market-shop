@@ -51,7 +51,7 @@ describe('AppComponent', () => {
     const menuItems = app.querySelectorAll('ion-label');
     expect(menuItems.length).toEqual(4);
     expect(menuItems[0].textContent).toContain('Home');
-    expect(menuItems[1].textContent).toContain('List');
+    expect(menuItems[1].textContent).toContain('Mercados');
     expect(menuItems[2].textContent).toContain('Logar');
     expect(menuItems[3].textContent).toContain('Perfil');
   });
@@ -63,7 +63,7 @@ describe('AppComponent', () => {
     const menuItems = app.querySelectorAll('ion-item');
     expect(menuItems.length).toEqual(4);
     expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/home');
-    expect(menuItems[1].getAttribute('ng-reflect-router-link')).toEqual('/list');
+    expect(menuItems[1].getAttribute('ng-reflect-router-link')).toEqual('/mercados');
     expect(menuItems[2].getAttribute('ng-reflect-router-link')).toEqual('/logar');
     expect(menuItems[3].getAttribute('ng-reflect-router-link')).toEqual('/perfil');
   });

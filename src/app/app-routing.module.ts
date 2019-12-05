@@ -21,6 +21,7 @@ const routes: Routes = [
     loadChildren: () => import('./logar/logar.module').then(m => m.LogarPageModule)
   },
   
+  
   { path: 'logar', 
   loadChildren: './logar/logar.module#LogarPageModule',
   canLoad: [AuthGuard] 
@@ -31,6 +32,10 @@ const routes: Routes = [
   { path: 'laticinios', loadChildren: './laticinios/laticinios.module#LaticiniosPageModule' },
   { path: 'frios', loadChildren: './frios/frios.module#FriosPageModule' },
   { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
+  {path: 'cart', loadChildren: './cart/cart.module#CartPageModule'},
+  { path: 'choix', loadChildren: './choix/choix.module#ChoixPageModule' },
+  { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' },
+  { path: 'mercados', loadChildren: './mercados/mercados.module#MercadosPageModule' },
 ];
 
 @NgModule({

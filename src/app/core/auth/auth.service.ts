@@ -8,6 +8,18 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
+  setCookie(arg0: string, email: any) {
+    throw new Error("Method not implemented.");
+  }
+  post(value: any) {
+    throw new Error("Method not implemented.");
+  }
+  clearCookie() {
+    throw new Error("Method not implemented.");
+  }
+  getCookie(arg0: string): any {
+    throw new Error("Method not implemented.");
+  }
 
   authState$: Observable<firebase.User>;
 

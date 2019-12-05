@@ -1,11 +1,26 @@
 <ion-header>
     <ion-toolbar text-center color="dark">
-        <ion-back-button slot="start"></ion-back-button>
-      <ion-title>Frutas</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center>
+        <b>Frutas </b>
+    </ion-title>
+    <ion-buttons slot="end">
+        <ion-button expand="full" (click)="logout()">
+            <ion-icon name="log-out" slot="icon-only"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+        <ion-button (click)="openCart()">
+            <ion-badge *ngIf="cart.length > 0">{{ cart.lengnt }}</ion-badge>
+            <ion-icon name="cart" slot="icon-only"></ion-icon>
+        </ion-button>
+    </ion-buttons>
     </ion-toolbar>
 </ion-header>
     
-<ion-content>
+<!-- <ion-content>
     <ion-searchbar showCancelButton="never"></ion-searchbar>
       <ion-list>
           <ion-item>
@@ -31,4 +46,42 @@
     <ion-infinite-scroll-content>
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
+</ion-content> -->
+
+<ion-content>
+
+  <div *ngFor="let cat of items" class="category-block">
+
+      <ion-row no-padding class="category-banner">
+          <ion-col text-left button tappable (click)="cat.expanded = !cat.expanded" align-self-center>
+              {{ cat.category }}
+          </ion-col>
+      </ion-row>
+
+  <ion-slides [options]="sliderConfig">
+     <ion-slide *ngFor="let product of cat.products">
+       <div *ngIf="cat.expanded">
+         <ion-card>
+             <ion-card-header>
+                 <ion-card-title>
+                     {{ product.name }}  {{product.amount}} à {{ product.preco }} R$
+                 </ion-card-title>
+                 <ion-card-content>
+                     <img src="/assets/icon/maça.png">
+                     <ion-button expand="full" (click)="addToCart(product)">Adcionar ao carrinho</ion-button>
+                 </ion-card-content>
+             </ion-card-header>
+         </ion-card>
+       </div>
+     </ion-slide>
+  </ion-slides>
+
+  </div>
+
+  <ion-col padding>
+      <p style="color: red" padding><ion-icon name="alert"></ion-icon> Para fazer uma compra, adicione os produtos à sua cesta
+        primeiro e quando você terminar um compromisso no carrinho para finalizar a compra e escolher
+        o método de pagamento e o método de entrega. <br> Agradecemos sua confiança.</p>
+  </ion-col>
+
 </ion-content>

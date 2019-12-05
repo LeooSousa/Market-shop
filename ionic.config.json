@@ -1,5 +1,7 @@
 {
   "name": "advogacy",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

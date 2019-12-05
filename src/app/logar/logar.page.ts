@@ -9,79 +9,67 @@ import { AlertOptions, LoadingOptions, ToastOptions } from '@ionic/core';
 import { AuthService } from '../core/auth/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { reject } from 'q';
+import { LoginService} from '../services/login.service'
 
 @Component({
   selector: 'app-logar',
   templateUrl: './logar.page.html',
   styleUrls: ['./logar.page.scss'],
 })
-export class LogarPage implements OnInit {
+export class LogarPage  {
 
   formLogin: FormGroup;
+  userId: string;
+  email: string;
+  token: string;
 
   constructor(
-    private router: Router,
     private fb: FormBuilder,
-    private loginService: AuthService,
-    private alertControl: AlertController,
-    private loadControl: LoadingController,
-    private toastControl: ToastController,
-    private activatedRoute: ActivatedRoute,
-    private navCtrl: NavController) { }
-  
-
-  ngOnInit(): void {
+    private loginService: LoginService,
+    private navCtrl: NavController
+  ) {
     this.createForm();
   }
+
+
+  ionViewWillEnter() {
+    this.createForm();
+  }
+
   private createForm() {
     this.formLogin = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      senha: ['', [Validators.required]]
+      username: ['', [Validators.required]],
+      password: ['', [Validators.required]]
     });
   }
 
-  async alert(options?: AlertOptions): Promise<HTMLIonAlertElement> {
-    const alert = await this.alertControl.create(options);
-    alert.present();
-    return alert;
-  }
-
-  async load(options?: LoadingOptions): Promise<HTMLIonLoadingElement> {
-    const load = await this.loadControl.create({
-      message: 'Aguarde...',
-      ...options
-    });
-    load.present();
-    return load;
-  }
-
-  async toast(options?: ToastOptions): Promise<HTMLIonToastElement> {
-    const toast = await this.toastControl.create({
-      position: 'bottom',
-      duration: 5000,
-      showCloseButton: true,
-      closeButtonText: 'Ok',
-      ...options
-    });
-    toast.present();
-    return toast;
-  }
-
-  async login() {
-    // console.log('Form', this.formLogin.value);
-    const loading = await this.load();
-    try {
-      const credentials = await this.loginService.loginComEmail(this.formLogin.value);
-      console.log('Autenticou', credentials);
-      // return this.router.navigate(['/tabs/dashboard']);
-      this.navCtrl.navigateForward(this.activatedRoute.snapshot.queryParamMap.get('redirect') || '/home');
-    } catch (e) {
-      await this.toast({
-        message: e.message
+  login() {
+    this.loginService.post(this.formLogin.value).subscribe((response: any) => {
+      console.log('Resonse', response);
+      this.loginService.setCookie('user_id', response.user_id);
+      this.loginService.setCookie('email', response.email);
+      this.loginService.setCookie('token', response.token);
+      this.userData();
+      this.irParaListagem();
+    },
+      (error) => {
+        console.log(error.json);
+        reject(error.json);
       });
-      console.log('Erro ao autenticar', e);
-    } finally {
-      loading.dismiss();
-    }
+  }
+
+  userData() {
+    this.email = this.loginService.getCookie('email');
+    this.userId = this.loginService.getCookie('user_id');
+    this.token = this.loginService.getCookie('token');
+  }
+
+  logout() {
+    this.loginService.clearCookie();
+  }
+
+  irParaListagem(){
+    this.navCtrl.navigateForward('/mercados');
   }
 }

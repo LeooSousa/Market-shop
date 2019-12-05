@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  baseUrl: 'http://market-perfect.herokuapp.com/',
+  
   firebase: {
     apiKey: "AIzaSyD5TuxQzDVB69RqR85Dg1R2tq5PZMYdye4",
     authDomain: "market-shop-ee0eb.firebaseapp.com",
@@ -12,8 +14,12 @@ export const environment = {
     storageBucket: "market-shop-ee0eb.appspot.com",
     messagingSenderId: "562163739144",
     appId: "1:562163739144:web:f7e4ab24a4bdc1c7123fbd",
-    measurementId: "G-9QYTJEJVST"
-  },
+    measurementId: "G-9QYTJEJVST",
+    url: 'http://localhost:3000',
+  
+    
+  }
+
 
 };
 

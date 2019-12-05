@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-toolbar color="dark" text-center>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Mercados
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+  <!-- <ion-grid>
+      <ion-row>
+          <ion-col>
+              <ion-icon name="contacts" height="500" widht="500" ></ion-icon>
+              <br>Consulta
+          </ion-col>
+          <ion-col>
+            ion-col
+            <br>#
+          </ion-col>
+          <ion-col>
+            ion-col
+            <br>#
+            <br>#
+          </ion-col>
+          <ion-col>
+            ion-col
+            <br>#
+            <br>#
+            <br>#
+          </ion-col>
+        </ion-row>
+  </ion-grid> -->
+  <ion-searchbar showCancelButton="never"></ion-searchbar>
+  <ion-list>
+      <ion-item>
+          <ion-avatar slot="start">
+              <img src="../assets/icon/marli.png">
+          </ion-avatar>
+        <ion-label> Mercadinho Marli </ion-label>
+        <a routerLink='/list'>VER</a>
+      </ion-item>
+      <ion-item>
+          <ion-avatar slot="start">
+              <img src="../assets/icon/feutos_frutas.png">
+          </ion-avatar>
+        <ion-label> Frutos e Frutas </ion-label>
+        <a routerLink='/list'>VER</a>
+      </ion-item>
+      <ion-item>
+          <ion-avatar slot="start">
+              <img src="../assets/icon/reinaldo.png">
+          </ion-avatar>
+        <ion-label> Supermercado Reinaldo </ion-label>
+        <a routerLink='/list'>VER</a>
+      </ion-item>
+      <ion-item>
+          <ion-avatar slot="start">
+              <img src="../assets/icon/carvalho.png">
+          </ion-avatar>
+        <ion-label> Carvalho </ion-label>
+        <a routerLink='/list'>VER</a>
+      </ion-item>
+    </ion-list>
+
+    <ion-grid>
+      <ion-row>
+          <ion-col>
+            <ion-card>
+              <img src="../assets/icon/marli.png">
+              <div class="card-title"> Mercadinho Marli </div>
+              <div class="card-subtitle"><a routerLink='/list'>VER</a></div>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card>
+              <img src="../assets/icon/feutos_frutas.png">
+              <div class="card-title"> Frutos e Frutas </div>
+              <div class="card-subtitle"><a routerLink='/list'>VER</a></div>
+            </ion-card>
+          </ion-col>
+      </ion-row>
+      <ion-row> 
+          <ion-col>
+          <ion-card>
+              <img src="../assets/icon/reinaldo.png">
+              <div class="card-title"> Supermercado Reinaldo </div>
+              <div class="card-subtitle"><a routerLink='/list'>VER</a></div>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+          <ion-card>
+              <img src="../assets/icon/carvalho.png">
+              <div class="card-title">Carvalho</div>
+              <div class="card-subtitle"><a routerLink='/list'>VER</a></div>
+            </ion-card>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    
+
+  <!-- <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-icon [name]="item.icon" slot="start"></ion-icon>
+      {{item.title}}
+      <div class="item-note" slot="end">
+        {{item.note}}
+      </div>
+    </ion-item>
+  </ion-list> -->
+  <!--
+    <div *ngIf="selectedItem" padding>
+      You navigated here from <b>{{selectedItem.title }}</b>
+    </div>
+  -->
+</ion-content>
