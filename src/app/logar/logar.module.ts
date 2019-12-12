@@ -7,12 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LogarPage } from './logar.page';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: LogarPage
-  }
-];
+
 
 @NgModule({
   imports: [
@@ -20,7 +15,12 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild([
+      {
+        path: '',
+        component: LogarPage
+      }
+    ])
   ],
   declarations: [LogarPage]
 })

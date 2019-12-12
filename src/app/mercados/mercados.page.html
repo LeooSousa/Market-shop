@@ -35,38 +35,17 @@
         </ion-row>
   </ion-grid> -->
   <ion-searchbar showCancelButton="never"></ion-searchbar>
-  <ion-list>
+  <ion-list *ngFor="let mercado of mercados">
       <ion-item>
           <ion-avatar slot="start">
               <img src="../assets/icon/marli.png">
           </ion-avatar>
-        <ion-label> Mercadinho Marli </ion-label>
+        <ion-label> {{ mercado.nome_estabelecimento }} </ion-label>
         <a routerLink='/list'>VER</a>
       </ion-item>
-      <ion-item>
-          <ion-avatar slot="start">
-              <img src="../assets/icon/feutos_frutas.png">
-          </ion-avatar>
-        <ion-label> Frutos e Frutas </ion-label>
-        <a routerLink='/list'>VER</a>
-      </ion-item>
-      <ion-item>
-          <ion-avatar slot="start">
-              <img src="../assets/icon/reinaldo.png">
-          </ion-avatar>
-        <ion-label> Supermercado Reinaldo </ion-label>
-        <a routerLink='/list'>VER</a>
-      </ion-item>
-      <ion-item>
-          <ion-avatar slot="start">
-              <img src="../assets/icon/carvalho.png">
-          </ion-avatar>
-        <ion-label> Carvalho </ion-label>
-        <a routerLink='/list'>VER</a>
-      </ion-item>
-    </ion-list>
+  </ion-list>
 
-    <ion-grid>
+    <!-- <ion-grid>
       <ion-row>
           <ion-col>
             <ion-card>
@@ -99,7 +78,7 @@
             </ion-card>
           </ion-col>
       </ion-row>
-    </ion-grid>
+    </ion-grid> -->
     
     
 

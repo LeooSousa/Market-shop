@@ -1,16 +1,12 @@
-<ion-header class="masters">
-  <ion-toolbar text-center color="dark">
-      <ion-buttons left>
-          <button ion-button icon-only (click)="viewCtrl.dismiss()">
-              <ion-icon name="arrow-back"></ion-icon>
-          </button>
-      </ion-buttons>
-    <ion-title>Logar</ion-title>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Autenticação
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-
-<ion-content padding color="primary">
+<ion-content padding>
   <form [formGroup]="formLogin" (submit)="login()">
     <ion-grid>
       <ion-row color="primary" justify-content-center>
@@ -32,4 +28,16 @@
       </ion-row>
     </ion-grid>
   </form>
-</ion-content>
+
+  <li>ID: {{userId}}</li>
+  <li>E-MAIL: {{email}}</li>
+  <li>TOKEN: {{token}}</li>
+
+
+  <ion-button (click)="irParaProdutos()">
+    Ver produtos
+  </ion-button>
+
+  <ion-button (click)="logout($event)">
+    Sair
+  </ion-button>

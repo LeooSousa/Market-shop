@@ -35,7 +35,7 @@ export function jwtOptionsFactory(storage) {
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment),
     AngularFireAuthModule,
     AngularFirestoreModule,
     HttpModule,
