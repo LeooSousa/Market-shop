@@ -3,7 +3,7 @@
       <ion-buttons slot="start">
           <ion-back-button defaultHref="/"></ion-back-button>
       </ion-buttons>
-    <ion-title >
+    <ion-title>
       Autenticação
     </ion-title>
   </ion-toolbar>
@@ -11,6 +11,9 @@
 
 <ion-content padding>
   <form [formGroup]="formLogin" (submit)="login()">
+    <h1 text-center>
+      <img class="blocktext" src="/assets/icon/login2.png" alt="">
+    </h1>
     <ion-grid>
       <ion-row color="dark" justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
