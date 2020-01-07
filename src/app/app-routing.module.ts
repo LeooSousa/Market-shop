@@ -19,6 +19,9 @@ const routes: Routes = [
   {
     path: 'logar',
     loadChildren: () => import('./logar/logar.module').then(m => m.LogarPageModule)
+  },{
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then(m => m.CartPageModule)
   },
   
   

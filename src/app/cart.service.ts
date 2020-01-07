@@ -18,9 +18,9 @@ export class CartService {
         {
             category: 'Batata',
             products: [
-                { id: 3, name: 'Kponan', preco: '500' },
-                { id: 4, name: 'Assawa', preco: '300' },
-                { id: 5, name: 'Lokpa', preco: '1000' },
+                { id: 3, name: 'Palha', preco: '500' },
+                { id: 4, name: 'Doce', preco: '300' },
+                { id: 5, name: 'inglesa', preco: '1000' },
                 { id: 6, name: 'Krenglè', preco: '300' },
                 { id: 7, name: 'Bètè Bètè', preco: '500' },
                 { id: 8, name: 'Florido', preco: '300' }

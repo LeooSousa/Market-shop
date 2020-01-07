@@ -26,6 +26,11 @@ export class AppComponent {
       icon: 'list'
     },
     {
+      title: 'Carrinho',
+      url: '/cart',
+      icon: 'cart'
+    },
+    {
       title: 'Logar',
       url: '/logar',
       icon: 'contact'
@@ -34,7 +39,13 @@ export class AppComponent {
       title: 'Perfil',
       url: '/perfil',
       icon: 'contact'
+    },
+    {
+      title: 'Sair',
+      url: '/',
+      icon: 'power',
     }
+    
 
   ];
   frete: any;

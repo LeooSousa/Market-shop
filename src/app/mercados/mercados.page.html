@@ -16,7 +16,7 @@
           <ion-col>
               <ion-icon name="contacts" height="500" widht="500" ></ion-icon>
               <br>Consulta
-          </ion-col>
+          '</ion-col>
           <ion-col>
             ion-col
             <br>#
@@ -36,12 +36,23 @@
   </ion-grid> -->
   <ion-searchbar showCancelButton="never"></ion-searchbar>
   <ion-list *ngFor="let mercado of mercados">
+    <ion-grid>
+      <ion-row>
+          <ion-col>
+            <ion-card>
+              <img src="../assets/icon/marli.png">
+              <div class="card-title"> {{ mercado.nome_estabelecimento }} </div>
+              <div class="card-subtitle"><a routerLink='/list'><ion-icon class="icon" name="share-alt"></ion-icon><ion-icon class="icon" name="share-alt"></ion-icon>1</a></div>
+            </ion-card>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
       <ion-item>
           <ion-avatar slot="start">
               <img src="../assets/icon/marli.png">
           </ion-avatar>
         <ion-label> {{ mercado.nome_estabelecimento }} </ion-label>
-        <a class="link" routerLink='/list'>VER</a>
+        <a class="link" routerLink='/list'><ion-icon class="icon" name="share-alt"></ion-icon></a>
       </ion-item>
   </ion-list>
 
