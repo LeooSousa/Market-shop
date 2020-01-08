@@ -5,14 +5,14 @@
     text-align: center;
     }
 
-    // .card-title {
-    // position: absolute;
-    // top: 36%;
-    // font-size: 2.0em;
-    // width: 100%;
-    // font-weight: bold;
-    // color:#f10998;
-    // }
+    .card-title {
+     position: absolute;
+     top: 66%;
+     font-size: 1.6em;
+     width: 100%;
+     font-weight: bold;
+     color:#000;
+     }
 
     .card-subtitle {
     font-size: 1.0em;
@@ -27,6 +27,7 @@ $fab-content-margin: 20px;
 
 .link{
     color: #e51b23;
+    top: 52%;
 }
 .icon{
     width: 40px !important; 
