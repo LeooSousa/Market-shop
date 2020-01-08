@@ -39,6 +39,7 @@ const routes: Routes = [
   { path: 'choix', loadChildren: './choix/choix.module#ChoixPageModule' },
   { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' },
   { path: 'mercados', loadChildren: './mercados/mercados.module#MercadosPageModule' },
+  { path: 'infoestabelecimento', loadChildren: './infoestabelecimento/infoestabelecimento.module#InfoestabelecimentoPageModule' },
 ];
 
 @NgModule({
